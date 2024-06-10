@@ -1,6 +1,6 @@
 {
   "name": "@volansapp/react-notion-x",
-  "version": "6.16.5",
+  "version": "6.16.6",
   "type": "module",
   "description": "Fast and accurate React renderer for Notion.",
   "repository": "NotionX/react-notion-x",
@@ -51,5 +51,5 @@
     "react": ">=16",
     "react-dom": ">=16"
   },
-  "gitHead": "5a20116552b9fd1c81a08c2cf138b35ba72db743"
+  "gitHead": "f84c6e52e1be29e6e2a14ddfbd189a7e9d29ad70"
 }
