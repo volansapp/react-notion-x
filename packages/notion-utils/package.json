@@ -1,6 +1,6 @@
 {
   "name": "@volansapp/notion-utils",
-  "version": "6.16.4",
+  "version": "6.16.5",
   "type": "module",
   "description": "Useful utilities for working with Notion data. Isomorphic.",
   "repository": "NotionX/react-notion-x",
