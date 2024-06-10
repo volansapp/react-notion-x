@@ -42,7 +42,7 @@ interface BlockProps {
 
   hideBlockId?: boolean
   disableHeader?: boolean
-
+  disableTitle?: boolean
   children?: React.ReactNode
 }
 
@@ -85,7 +85,8 @@ export const Block: React.FC<BlockProps> = (props) => {
     pageAside,
     pageCover,
     hideBlockId,
-    disableHeader
+    disableHeader,
+    disableTitle
   } = props
 
   if (!block) {
@@ -207,11 +208,13 @@ export const Block: React.FC<BlockProps> = (props) => {
 
                     {pageHeader}
 
-                    <h1 className='notion-title'>
-                      {pageTitle ?? (
-                        <Text value={properties?.title} block={block} />
-                      )}
-                    </h1>
+                    {!disableTitle && (
+                      <h1 className='notion-title'>
+                        {pageTitle ?? (
+                          <Text value={properties?.title} block={block} />
+                        )}
+                      </h1>
+                    )}
 
                     {(block.type === 'collection_view_page' ||
                       (block.type === 'page' &&

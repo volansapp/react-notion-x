@@ -58,6 +58,7 @@ export const NotionRenderer: React.FC<{
   blockId?: string
   hideBlockId?: boolean
   disableHeader?: boolean
+  disableTitle?: boolean
 }> = ({
   components,
   recordMap,
