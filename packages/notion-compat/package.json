@@ -1,5 +1,5 @@
 {
-  "name": "notion-compat",
+  "name": "@volansapp/notion-compat",
   "version": "6.16.3",
   "type": "module",
   "description": "Compatibility layer between the official Notion API and unofficial private API.",
@@ -43,5 +43,6 @@
       "--no-warnings",
       "--experimental-specifier-resolution=node"
     ]
-  }
+  },
+  "gitHead": "7fad3d04df060cc5e1109400832545cd00221234"
 }

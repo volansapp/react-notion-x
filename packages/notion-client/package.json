@@ -1,5 +1,5 @@
 {
-  "name": "notion-client",
+  "name": "@volansapp/notion-client",
   "version": "6.16.3",
   "type": "module",
   "description": "Robust TypeScript client for the unofficial Notion API.",
@@ -37,5 +37,6 @@
       "--no-warnings",
       "--experimental-specifier-resolution=node"
     ]
-  }
+  },
+  "gitHead": "7fad3d04df060cc5e1109400832545cd00221234"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "notion-utils",
+  "name": "@volansapp/notion-utils",
   "version": "6.16.3",
   "type": "module",
   "description": "Useful utilities for working with Notion data. Isomorphic.",
@@ -44,5 +44,6 @@
       "--no-warnings",
       "--experimental-specifier-resolution=node"
     ]
-  }
+  },
+  "gitHead": "7fad3d04df060cc5e1109400832545cd00221234"
 }
