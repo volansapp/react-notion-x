@@ -43,6 +43,7 @@ interface BlockProps {
   hideBlockId?: boolean
   disableHeader?: boolean
   disableTitle?: boolean
+
   children?: React.ReactNode
 }
 
