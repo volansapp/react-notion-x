@@ -58,6 +58,7 @@ export const NotionRenderer: React.FC<{
   blockId?: string
   hideBlockId?: boolean
   disableHeader?: boolean
+  disableTitle?: boolean
 }> = ({
   components,
   recordMap,
@@ -83,46 +84,46 @@ export const NotionRenderer: React.FC<{
   defaultPageCoverPosition,
   ...rest
 }) => {
-  const zoom = React.useMemo(
-    () =>
-      typeof window !== 'undefined' &&
-      mediumZoom({
-        background: 'rgba(0, 0, 0, 0.8)',
-        minZoomScale: 2.0,
-        margin: getMediumZoomMargin()
-      }),
-    []
-  )
+    const zoom = React.useMemo(
+      () =>
+        typeof window !== 'undefined' &&
+        mediumZoom({
+          background: 'rgba(0, 0, 0, 0.8)',
+          minZoomScale: 2.0,
+          margin: getMediumZoomMargin()
+        }),
+      []
+    )
 
-  return (
-    <NotionContextProvider
-      components={components}
-      recordMap={recordMap}
-      mapPageUrl={mapPageUrl}
-      mapImageUrl={mapImageUrl}
-      searchNotion={searchNotion}
-      isShowingSearch={isShowingSearch}
-      onHideSearch={onHideSearch}
-      fullPage={fullPage}
-      rootPageId={rootPageId}
-      rootDomain={rootDomain}
-      darkMode={darkMode}
-      previewImages={previewImages}
-      forceCustomImages={forceCustomImages}
-      showCollectionViewDropdown={showCollectionViewDropdown}
-      linkTableTitleProperties={linkTableTitleProperties}
-      isLinkCollectionToUrlProperty={isLinkCollectionToUrlProperty}
-      showTableOfContents={showTableOfContents}
-      minTableOfContentsItems={minTableOfContentsItems}
-      defaultPageIcon={defaultPageIcon}
-      defaultPageCover={defaultPageCover}
-      defaultPageCoverPosition={defaultPageCoverPosition}
-      zoom={isImageZoomable ? zoom : null}
-    >
-      <NotionBlockRenderer {...rest} />
-    </NotionContextProvider>
-  )
-}
+    return (
+      <NotionContextProvider
+        components={components}
+        recordMap={recordMap}
+        mapPageUrl={mapPageUrl}
+        mapImageUrl={mapImageUrl}
+        searchNotion={searchNotion}
+        isShowingSearch={isShowingSearch}
+        onHideSearch={onHideSearch}
+        fullPage={fullPage}
+        rootPageId={rootPageId}
+        rootDomain={rootDomain}
+        darkMode={darkMode}
+        previewImages={previewImages}
+        forceCustomImages={forceCustomImages}
+        showCollectionViewDropdown={showCollectionViewDropdown}
+        linkTableTitleProperties={linkTableTitleProperties}
+        isLinkCollectionToUrlProperty={isLinkCollectionToUrlProperty}
+        showTableOfContents={showTableOfContents}
+        minTableOfContentsItems={minTableOfContentsItems}
+        defaultPageIcon={defaultPageIcon}
+        defaultPageCover={defaultPageCover}
+        defaultPageCoverPosition={defaultPageCoverPosition}
+        zoom={isImageZoomable ? zoom : null}
+      >
+        <NotionBlockRenderer {...rest} />
+      </NotionContextProvider>
+    )
+  }
 
 export const NotionBlockRenderer: React.FC<{
   className?: string
